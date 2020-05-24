@@ -1,5 +1,5 @@
 const searchMealRecipe = async (meal) => {
-	const base = ''
+	const base = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 	const query = `${meal}`
 
 	const response = await fetch(base + query)
@@ -8,4 +8,4 @@ const searchMealRecipe = async (meal) => {
 	console.log(data.meals)
 }
 
-searchMealRecipe('pizza')
+// searchMealRecipe('pizza')
