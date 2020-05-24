@@ -7,4 +7,4 @@ const getRandomMeal = async () => {
 	console.log(data.meals[0])
 }
 
-getRandomMeal()
+// getRandomMeal()

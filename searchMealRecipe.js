@@ -8,4 +8,4 @@ const searchMealRecipe = async (meal) => {
 	console.log(data.meals[0])
 }
 
-searchMealRecipe('pizza')
+// searchMealRecipe('pizza')
