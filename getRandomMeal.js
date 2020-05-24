@@ -4,7 +4,7 @@ const getRandomMeal = async () => {
 	const response = await fetch(query)
 	const data = await response.json()
 
-	console.log(data.meals)
+	console.log(data.meals[0])
 }
 
-// getRandomMeal()
+getRandomMeal()

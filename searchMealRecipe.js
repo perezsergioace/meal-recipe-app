@@ -5,7 +5,7 @@ const searchMealRecipe = async (meal) => {
 	const response = await fetch(base + query)
 	const data = await response.json()
 
-	console.log(data.meals)
+	console.log(data.meals[0])
 }
 
-// searchMealRecipe('pizza')
+searchMealRecipe('pizza')
