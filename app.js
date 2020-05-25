@@ -3,10 +3,27 @@ const meal_container = document.getElementById('meal')
 
 get_meal_btn.addEventListener('click', async () => {
 	const base = 'https://www.themealdb.com/api/json/v1/1/random.php'
-	const response = await fetch(base)
-	const data = await response.json()
+	try {
+        const response = await fetch(base)
+        // error handling
+		if (!response.ok) {
+			const errorInnerHTML = `
+            <div>
+                <div class="error">
+                    <h1>Something is wrong here! <strong>${response.status}</strong></h1>
+                </div>
+            </div>
+            `
+			meal_container.innerHTML = errorInnerHTML
+			throw new Error(response.status)
+		}
+		const data = await response.json()
 
-	createMeal(data.meals[0])
+		createMeal(data.meals[0])
+	} catch (error) {
+		console.log('Something is wrong here!')
+		console.error(error)
+	}
 })
 
 const createMeal = (meal) => {
