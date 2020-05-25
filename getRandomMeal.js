@@ -8,7 +8,7 @@ const getRandomMeal = async () => {
 		}
 		const data = await response.json()
 		console.log(data.meals[0])
-		document.getElementById('data').innerHTML = data.meals[0].strMeal
+		// document.getElementById('data').innerHTML = data.meals[0].strMeal
 	} catch (error) {
 		console.log('Network Error, something is wrong here!')
 		console.log(error)

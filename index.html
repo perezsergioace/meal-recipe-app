@@ -4,14 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <title>Meal Recipe App</title>
 </head>
 
 <body>
-    <h1 id="data"></h1>
+    <div class="container">
+        <div class="row text-center">
+            <h3>Feeling Hungry?</h3>
+            <h5>Get a random meal by clicking below</h5>
+            <button class="button-primary" id="get-meal">Get Meal</button>
+        </div>
 
-    <script src="./searchMealRecipe.js"></script>
-    <script src="./getRandomMeal.js"></script>
+        <div id="meal" class="row meal"></div>
+    </div>
+
+    <!-- <script src="./searchMealRecipe.js"></script> -->
+    <!-- <script src="./getRandomMeal.js"></script> -->
+    <script src="./app.js"></script>
 </body>
 
 </html>
